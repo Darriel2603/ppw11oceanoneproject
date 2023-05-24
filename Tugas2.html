@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pendaftaran Praktikan PPW1</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h1 {
+            color: orange;
+            text-align: center;
+        }
+        td {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Pendaftaran Praktikan PPW1</h1>
+        <script>
+            var isPPW1Praktikan = confirm("Apakah Anda praktikan PPW1?");
+            
+            if (isPPW1Praktikan) {
+                var nama = prompt("Masukkan Nama Anda:");
+                var nim = prompt("Masukkan NIM Anda:");
+                var angkatan = prompt("Masukkan Angkatan Anda:");
+
+                var tableContent = `
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Nama</th>
+                                <th>NIM</th>
+                                <th>Angkatan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>${nama}</td>
+                                <td>${nim}</td>
+                                <td>${angkatan}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                `;
+
+                document.write(tableContent);
+            } else {
+                document.write("<h3 class='text-center'>Anda bukan praktikan PPW1, Anda tidak boleh masuk!</h3>");
+            }
+        </script>
+    </div>
+</body>
+</html>
